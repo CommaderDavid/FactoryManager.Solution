@@ -9,7 +9,7 @@ namespace Factory.Models
         public string License { get; set; }
         public virtual ICollection<EngineerMachine> Machines { get; set; }
 
-        public Machine()
+        public Engineer()
         {
             this.Machines = new HashSet<EngineerMachine>();
         }
