@@ -4,15 +4,14 @@ namespace Factory.Models
 {
     public class Engineer
     {
-        public int CampaignId { get; set; }
+        public int EngineerId { get; set; }
         public string Name { get; set; }
-        public string Setting { get; set; }
-        public string Rulebook { get; set; }
-        public virtual ICollection<CampaignCharacter> Characters { get; set; }
+        public string License { get; set; }
+        public virtual ICollection<EngineerMachine> Machines { get; set; }
 
-        public Campaign()
+        public Machine()
         {
-            this.Characters = new HashSet<CampaignCharacter>();
+            this.Machines = new HashSet<EngineerMachine>();
         }
     }
 }
