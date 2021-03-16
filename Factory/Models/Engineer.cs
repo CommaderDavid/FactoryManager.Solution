@@ -6,7 +6,7 @@ namespace Factory.Models
     {
         public int EngineerId { get; set; }
         public string Name { get; set; }
-        public string License { get; set; }
+        public string Description { get; set; }
         public virtual ICollection<EngineerMachine> Machines { get; set; }
 
         public Engineer()
