@@ -1,0 +1,15 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer;
+
+<h2>Are you sure you want to fire this Engineer?</h2>
+<p>Note: The Machines this Engineer is Licenses to will not be deleted.</p>
+
+<h4>Engineer Name: @Html.DisplayFor(model => model.Name)</h4>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+<p>@Html.ActionLink("Back to engineers", "Index", "Engineers")</p>
