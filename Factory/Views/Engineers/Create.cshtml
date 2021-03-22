@@ -14,6 +14,9 @@
     @Html.Label("Engineer Description:")
     @Html.TextBoxFor(model => model.Description)
     <br>
+    @Html.Label("Select Machine:")
+    @Html.DropDownList("MachineId")
+    <br>
     <input type="submit" value="Add new engineer" class="btn btn-default" />
 }
 
