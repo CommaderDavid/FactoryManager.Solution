@@ -1,0 +1,15 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Factory.Models.Machine;
+
+<h2>Are you sure you want to remove this Machine?</h2>
+<p>Note: The Engineers that are Licensed to work on this Machine will not be deleted.</p>
+
+<h4>Machine Name: @Html.DisplayFor(model => model.Name)</h4>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+<p>@Html.ActionLink("Back to machines", "Index", "Machines")</p>
