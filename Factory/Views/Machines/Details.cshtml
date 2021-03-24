@@ -29,9 +29,9 @@ else
     </ul>
 }
 <br>
-<h5>@Html.ActionLink("Add an Engineer", "AddEngineer", "Machines")</h5>
+<h5>@Html.ActionLink("Add an Engineer", "AddEngineer", "Machines", new { @id = Model.MachineId })</h5>
 
 <p>@Html.ActionLink("Back to machines", "Index", "Machines")</p>
-<p>@Html.ActionLink("Edit machine", "Edit", "Machines")</p>
-<p>@Html.ActionLink("Delete machine", "Delete", "Machines")</p>
+<p>@Html.ActionLink("Edit machine", "Edit", "Machines", new { @id = Model.MachineId })</p>
+<p>@Html.ActionLink("Delete machine", "Delete", "Machines", new { @id = Model.MachineId })</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
