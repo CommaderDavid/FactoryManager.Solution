@@ -2,6 +2,27 @@
     Layout = "_Layout";
 }
 
+@using Factory.Models;
+
 <h1>Welcome to Dr. Sillystringz's Factory Managment!</h1>
 <h3>@Html.ActionLink("See all Engineers", "Index", "Engineers")</h3>
 <h3>@Html.ActionLink("See all Machine", "Index", "Machines")</h3>
+<br>
+<div id="center">
+    <h2>All Machines and Engineers:</h2>
+
+    @if (@ViewBag.Count == 0)
+    {
+        <h3>You have no Engineers employed yet.</h3>
+    }
+
+    @foreach (Engineer engineer in ViewBag.Engineers)
+    {
+        <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
+    }
+
+    @foreach (Machine machine in ViewBag.Machines)
+    {
+        <li>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</li>
+    }
+</div>
