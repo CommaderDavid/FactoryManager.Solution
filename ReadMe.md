@@ -8,7 +8,7 @@ This program allows the user to add Engineers and Machines to the Factory's list
 * In the terminal; Navigate to the Factory folder
 * In terminal run `dotnet ef database update`
 * Run `dotnet restore` in the terminal
-* Run `dotnet run'
+* Run `dotnet run`
 * Open up your browser to `http://localhost:5000`
 * Enjoy!
 ### Contact
